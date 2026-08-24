@@ -20,6 +20,13 @@ Puis ouvrir l’adresse affichée par Vite. Un build de production se crée avec
 - checkout de démonstration (Visa/Mastercard, PayPal, MVola, Orange Money, Airtel Money, espèces) ;
 - interface responsive et navigation clavier de base.
 
+## Structure complémentaire
+
+- `docs/ARCHITECTURE.md` décrit la fusion des deux versions et l’évolution backend ;
+- `database/schema.sql` fournit le schéma PostgreSQL du catalogue, des clients, commandes et paiements ;
+- `shopify/README.md` décrit la variante de thème Shopify ;
+- `docs/design/` contient les concepts visuels de référence.
+
 ## Limites de cette V1
 
 Le checkout ne prélève aucun paiement. Les produits, stocks, utilisateurs et commandes devront être raccordés à un backend sécurisé avant une mise en production.
