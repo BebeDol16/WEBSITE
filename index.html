@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ELITE Mobile — accessoires premium pour smartphones à Madagascar." />
+    <meta name="theme-color" content="#090a0b" />
+    <title>ELITE Mobile — Accessoires premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <style>
+      :root { --accent: #1457ff; --soft: #f5f7fb; }
+      .logo span, .logo-light span { color: var(--accent); }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      .button-outline { border: 1px solid currentColor; background: transparent; color: inherit; }
+      .hero .button-accent { color: #fff; }
+      .hero { background: #fff; color: #090a0b; border-bottom: 1px solid var(--line); }
+      .hero p { color: #555a63; }
+      .hero .orb { box-shadow: inset 0 0 80px #000, 0 0 70px #cdd3df; }
+      .announcement span, .success-mark { background: var(--accent); }
+      .services b, .checkout legend b { color: var(--accent); }
+      @media (max-width: 680px) { .hero-actions { align-items: flex-start; flex-direction: column; } }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalogue">Aller au catalogue</a>
+    <div class="announcement">Livraison dans tout Madagascar <span></span> Paiement sécurisé <span></span> Retours sous 14 jours</div>
+    <header class="site-header" id="header">
+      <a class="logo" href="#top" aria-label="ELITE Mobile, accueil">ELITE<span>.</span></a>
+      <nav aria-label="Navigation principale">
+        <a href="#catalogue">Boutique</a><a href="#brands">Marques</a><a href="#catalogue">Nouveautés</a><a href="#services">Services</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="openSearch" aria-label="Rechercher">⌕</button>
+        <button class="icon-button" id="showFavorites" aria-label="Afficher les favoris">♡<b id="favoriteCount">0</b></button>
+        <button class="icon-button" id="openCart" aria-label="Ouvrir le panier">Bag<b id="cartCount">0</b></button>
+        <button class="menu-button" id="menuButton" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Accessoires.<br />Sans compromis.</h1>
+          <p>Protection, énergie et technologie premium pour votre smartphone.</p>
+          <div class="hero-actions"><a class="button button-accent" href="#catalogue">Découvrir la collection <span>→</span></a><a class="button button-outline" href="#brands">Choisir mon téléphone</a></div>
+        </div>
+        <div class="hero-visual" aria-label="Collection d’accessoires premium">
+          <div class="orb"></div><div class="phone"><i></i><i></i><i></i><span>ELITE.</span></div><div class="case"></div><div class="charger"><span>ELITE.</span></div><div class="cable"></div>
+        </div>
+      </section>
+
+      <section class="brand-section" id="brands" aria-labelledby="brandTitle">
+        <h2 id="brandTitle">Choisissez votre marque</h2>
+        <div class="brand-list" id="brandList"></div>
+        <label class="model-field">Modèle compatible<select id="modelSelect"><option value="">Tous les modèles</option></select></label>
+      </section>
+
+      <section class="catalogue" id="catalogue" aria-labelledby="catalogueTitle">
+        <div class="section-heading"><div><p>Collection 2026</p><h2 id="catalogueTitle">Produits premium</h2></div><span id="resultCount"></span></div>
+        <div class="filters">
+          <label class="search-field"><span class="sr-only">Rechercher</span><input id="searchInput" type="search" placeholder="Rechercher une coque, un chargeur…" /><span>⌕</span></label>
+          <label><span class="sr-only">Catégorie</span><select id="categorySelect"><option value="">Toutes les catégories</option></select></label>
+          <label><span class="sr-only">Trier</span><select id="sortSelect"><option value="featured">Recommandés</option><option value="price-asc">Prix croissant</option><option value="price-desc">Prix décroissant</option></select></label>
+          <button class="text-button" id="resetFilters">Réinitialiser</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state hidden" id="emptyState"><strong>Aucun produit trouvé.</strong><p>Essayez une autre marque, catégorie ou recherche.</p><button class="button button-dark" id="emptyReset">Voir toute la collection</button></div>
+      </section>
+
+      <section class="editorial"><div><h2>Conçus pour suivre votre rythme.</h2><p>Des matières durables, des performances fiables et une esthétique sans compromis.</p></div><div class="editorial-art"><span>01</span><span>PROTECTION</span><span>PERFORMANCE</span></div></section>
+      <section class="services" id="services"><article><b>01</b><div><strong>Produits authentiques</strong><p>Sélection rigoureuse et garantie.</p></div></article><article><b>02</b><div><strong>Livraison à Madagascar</strong><p>Rapide et suivie.</p></div></article><article><b>03</b><div><strong>Service client réactif</strong><p>À votre écoute avant et après l’achat.</p></div></article><article><b>04</b><div><strong>Paiement protégé</strong><p>Aucune donnée bancaire stockée.</p></div></article></section>
+    </main>
+
+    <footer><div><a class="logo logo-light" href="#top">ELITE<span>.</span></a><p>L’essentiel. En mieux.</p></div><div><strong>Boutique</strong><a href="#catalogue">Tous les produits</a><a href="#brands">Compatibilité</a><a href="#catalogue">Nouveautés</a></div><div><strong>Besoin d’aide ?</strong><a href="tel:+261340000000">+261 34 00 000 00</a><a href="mailto:contact@elite.mg">contact@elite.mg</a><span>Antananarivo, Madagascar</span></div><small>© 2026 ELITE. Prototype e-commerce.</small></footer>
+
+    <div class="overlay" id="overlay" hidden></div>
+    <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle"><div class="drawer-head"><div><span>VOTRE SÉLECTION</span><h2 id="cartTitle">Panier</h2></div><button class="close-button" data-close aria-label="Fermer">×</button></div><div class="drawer-body" id="cartItems"></div><div class="drawer-foot" id="cartFooter"><div><span>Sous-total</span><strong id="cartSubtotal">0 Ar</strong></div><p>Livraison calculée à l’étape suivante.</p><button class="button button-accent full" id="checkoutButton">Commander <span>→</span></button></div></aside>
+    <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle"><button class="close-button modal-close" data-close aria-label="Fermer">×</button><div id="productDetail"></div></div>
+    <div class="checkout" id="checkoutModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="checkoutTitle"><div class="checkout-head"><div><span>PAIEMENT SÉCURISÉ</span><h2 id="checkoutTitle">Finaliser la commande</h2></div><button class="close-button" data-close aria-label="Fermer">×</button></div><form id="checkoutForm"><div class="checkout-grid"><div class="checkout-fields"><fieldset><legend><b>01</b> Vos informations</legend><div class="form-grid"><label>Nom complet<input name="name" required autocomplete="name" /></label><label>Téléphone<input name="phone" required type="tel" autocomplete="tel" placeholder="+261 34 00 000 00" /></label><label class="wide">E-mail<input name="email" required type="email" autocomplete="email" /></label></div></fieldset><fieldset><legend><b>02</b> Livraison</legend><div class="form-grid"><label>Ville<input name="city" required autocomplete="address-level2" value="Antananarivo" /></label><label>Quartier<input name="district" required /></label><label class="wide">Adresse<input name="address" required autocomplete="street-address" /></label></div></fieldset><fieldset><legend><b>03</b> Paiement</legend><div class="payments" id="paymentOptions"></div><p class="payment-note" id="paymentNote"></p></fieldset></div><aside class="order-summary"><span>VOTRE COMMANDE</span><div id="checkoutItems"></div><div class="summary-line"><span>Sous-total</span><strong id="checkoutSubtotal"></strong></div><div class="summary-line"><span>Livraison</span><strong>10 000 Ar</strong></div><div class="summary-total"><span>Total</span><strong id="checkoutTotal"></strong></div><button class="button button-accent full" type="submit">Confirmer la commande →</button><small>Prototype : aucun paiement réel n’est prélevé.</small></aside></div></form></div>
+    <div class="success" id="successModal" role="dialog" aria-modal="true" aria-hidden="true"><div class="success-mark">✓</div><span>COMMANDE CONFIRMÉE</span><h2>Merci pour votre commande.</h2><p>Votre référence est <strong id="orderReference"></strong>. Nous vous contacterons pour confirmer la livraison.</p><button class="button button-dark" id="successButton">Continuer mes achats</button></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/js/app.js"></script>
+  </body>
+</html>
+
