@@ -10,7 +10,8 @@ const elements = {
 };
 
 function productVisual(product, large = false) {
-  return `<div class="product-visual ${large ? "large" : ""} tone-${product.color}"><div class="device device-${product.category.toLowerCase().replace("â", "a")}"><span>ELITE.</span></div><i></i><i></i></div>`;
+  const categoryClass = product.category.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  return `<div class="product-visual ${large ? "large" : ""} tone-${product.color}"><div class="device device-${categoryClass}"><span>ELITE.</span></div><i></i><i></i></div>`;
 }
 
 function renderBrands() {
