@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion — ELITE Mobile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/admin.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <a class="admin-logo" href="/">ELITE<span>.</span></a>
+    <section class="auth-card">
+      <div><p class="admin-kicker">ESPACE SÉCURISÉ</p><h1>Connexion</h1><p>Accédez à votre compte client ou à l’administration.</p></div>
+      <div class="auth-tabs" role="tablist"><button class="active" data-mode="login">Se connecter</button><button data-mode="signup">Créer un compte</button></div>
+      <form id="authForm">
+        <label id="nameField" hidden>Nom complet<input name="fullName" autocomplete="name" /></label>
+        <label>Adresse e-mail<input name="email" type="email" autocomplete="email" required /></label>
+        <label>Mot de passe<input name="password" type="password" autocomplete="current-password" minlength="10" required /></label>
+        <button class="admin-primary" type="submit">Continuer</button>
+        <p class="form-status" id="authStatus" role="status"></p>
+      </form>
+      <a class="back-link" href="/">← Retour à la boutique</a>
+    </section>
+  </main>
+  <script type="module" src="/src/js/login.js"></script>
+</body>
+</html>
+
